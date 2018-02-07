@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+    <title>GWTT Engineering</title>
+    <h1> <img src = "https://s3.amazonaws.com/happie-production-media/company/images/logo%20(2).png" alt = "GWTT">Engineering</h1>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand">GWTT Engineering</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Recent Activity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sales Estimate</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome!</h1>
+        <h2>Go to /site to create a new site!</h2>
+      </div>
+    </div>
+
+    <h1> Here are the current sites: </h1>
+
+    <div class = "container">
+    {% if sites %}
+    <table style="width: 50%" class="table tops">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">site name</th>
+          <th scope="col">date opened</th>
+          <th scope="col">crew list</th>
+          <th scope="col">project manager</th>
+          <th scope="col">flowrate</th>
+          <th scope="col">current treatmant</th>
+        </tr>
+      </thead>
+        {% for s in sites %}
+        <tbody>
+          <tr>
+          <th scope="row">{{s.site_name}}</th>
+          <td> {{s.date_opened}} </td>
+          <td> {{s.crew_list}} </td>
+          <td> {{s.project_manager}} </td>
+          <td> {{s.flowrate}} </td>
+          <td> {{s.current_treatmant}} </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+      </table>
+        {% else %}
+          <p> No sites registered </p>
+      {% endif %}
+    </div>
+    <p>{{sites}} </p>
+  </body>
+</html>

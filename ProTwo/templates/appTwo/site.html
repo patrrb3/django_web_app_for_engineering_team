@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADk2ztTfB674lE1DlJbRLUsVtplKd9FPw&callback=initMap">
+  </script>
+  <title>GWTT Engineering</title>
+  <h1> <img src = "https://s3.amazonaws.com/happie-production-media/company/images/logo%20(2).png" alt = "GWTT">Engineering</h1>
+
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand">GWTT Engineering</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="GWTT_site_page_example.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sites.html">Sites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="recent_activity.html">Recent Activity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sales Estimate</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">Data</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Please sign up here!</h1>
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class='btn btn-primary' value="Submit">
+      </form>
+    </div>
+
+    <div class="container">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADk2ztTfB674lE1DlJbRLUsVtplKd9FPw&callback=initMap">
+    </script>
+    <script>
+        function initMap() {
+
+          var uluru = {lat: 41.1865, lng: -73.1952};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+      </script>
+      <style>
+         #map {
+          height: 400px;
+          width: 50%;
+
+         }
+         .tops {
+           margin-top: 80px
+         }
+
+      </style>
+      <h3 class = "tops">Site Location</h3>
+  <div id="map"></div>
+  <script>
+    function initMap() {
+
+      var uluru = {lat: 41.1865, lng: -73.1952};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  </div>
+</div>
+
+        <div class = "container">
+        <h1 class = "tops">Recent Activity</h1>
+        <table style="width: 50%" class="table tops">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Employee</th>
+            <th scope="col">Email</th>
+            <th scope="col">Changes</th>
+            <th scope="col">Date Changed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">John Smith</th>
+            <td>johnsmith@gwttllc.com</td>
+            <td>Changed flowarate from 2000gpm to 2500gpm, added water data, recalculated contaminants present, adjusted treatmant plan to include Chemical A, added Pump B to equipment list, removed Pump C from equipment list </td>
+            <td> 11:00am 1/28/17</td>
+          </tr>
+          <tr>
+            <th scope="row">John Smith</th>
+            <td>johnsmith@gwttllc.com</td>
+            <td>Changed flowarate from 2000gpm to 2500gpm, added water data, recalculated contaminants present, adjusted treatmant plan to include Chemical A, added Pump B to equipment list, removed Pump C from equipment list </td>
+            <td> 11:00am 1/28/17</td>
+          </tr>
+          <tr>
+            <th scope="row">John Smith</th>
+            <td>johnsmith@gwttllc.com</td>
+            <td>Changed flowarate from 2000gpm to 2500gpm, added water data, recalculated contaminants present, adjusted treatmant plan to include Chemical A, added Pump B to equipment list, removed Pump C from equipment list </td>
+            <td> 11:00am 1/28/17</td>
+          </tr>
+        </tbody>
+      </div>
+
+
+
+  </body>
+</html>
