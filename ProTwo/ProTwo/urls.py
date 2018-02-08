@@ -20,7 +20,8 @@ from appTwo import views
 
 urlpatterns = [
     url(r'^$',views.index,name='index'),
-    url(r'^site/',include('appTwo.urls')),
+    url(r'^appTwo/',include('appTwo.urls')),
+    url(r'^site/',views.site, name = "Site"),
     url(r'^document_upload/', views.model_form_upload, name = 'Document'),
     url(r'^sales_estimate/', views.sales_estimate, name = 'Estimate'),
     url(r'^admin/', admin.site.urls),
