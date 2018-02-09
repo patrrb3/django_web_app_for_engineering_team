@@ -19,10 +19,16 @@ class Site(models.Model):
     current_treatmant= models.CharField(max_length=128)
     #SiteID = site_name
 
+    def __str__(self):
+        return self.site_name
+
 class Document(models.Model):
     description = models.CharField(max_length=255, blank=True)
     document = models.FileField(upload_to='documents/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.description
 
 
 
@@ -34,3 +40,6 @@ class Estimate(models.Model):
     project_manager = models.CharField(max_length=128)
     flowrate = models.CharField(max_length=128)
     current_treatmant= models.CharField(max_length=128)
+
+    def __str__(self):
+        return self.current_treatmant
