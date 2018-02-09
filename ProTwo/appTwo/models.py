@@ -1,6 +1,14 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
+class UserProfileInfo (models.Model):
+    user = models.ForeignKey(User, on_delete = models.PROTECT)
+    department = models.CharField(max_length=128)
+
+    def __str__(self):
+        return self.user.username
+
+
 class Site(models.Model):
     site_name = models.CharField(max_length=128)
     #client_name = site = models.CharField(max_length=128)
@@ -9,7 +17,7 @@ class Site(models.Model):
     project_manager = models.CharField(max_length=128)
     flowrate = models.CharField(max_length=128)
     current_treatmant= models.CharField(max_length=128)
-    #ADD SiteID
+    #SiteID = site_name
 
 class Document(models.Model):
     description = models.CharField(max_length=255, blank=True)
