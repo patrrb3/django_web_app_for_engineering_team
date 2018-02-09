@@ -16,11 +16,11 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 MEDIA_DIR = os.path.join(BASE_DIR,'media')
-STATIC_DIR os.path.join(BASE_DIR,'static')
+STATIC_DIR = os.path.join(BASE_DIR,'static')
 
 
 
-SECRET_KEY = ''
+SECRET_KEY = 'aa'
 
 DEBUG = True
 
@@ -104,9 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 PASSWORD_HASHERS = [
-    'django.contrib.auth.hashers.PBKDF2PasswordHashers',
-    'django.contrib.auth.hashers.BcryptSHA256PasswordHashers',
-    'django.contrib.auth.hashers.BcryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 
 ]
