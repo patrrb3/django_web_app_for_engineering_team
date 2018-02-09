@@ -20,7 +20,7 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 
 
 
-SECRET_KEY = 'aa'
+SECRET_KEY = '#'
 
 DEBUG = True
 
