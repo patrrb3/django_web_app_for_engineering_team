@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^appTwo/',include('appTwo.urls')),
     url(r'^site/',views.site, name = "Site"),
     url(r'^document_upload/', views.model_form_upload, name = 'Document'),
-    url(r'^sales_estimate/', views.sales_estimate, name = 'Estimate'),
+    url(r'^sales_estimate/', views.sales_estimate, name = 'salesEstimate'),
     url(r'^admin/', admin.site.urls),
 ]

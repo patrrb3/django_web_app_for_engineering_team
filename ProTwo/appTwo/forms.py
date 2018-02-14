@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from appTwo.models import Site, Document, UserProfileInfo
+from appTwo.models import Site, Document, UserProfileInfo, Estimate
 
 
 class NewSiteForm(forms.ModelForm):
@@ -18,7 +18,7 @@ class DocumentForm(forms.ModelForm):
 
 class EstimateForm(forms.ModelForm):
     class Meta():
-        model = Site
+        model = Estimate
         fields = '__all__'
 
 

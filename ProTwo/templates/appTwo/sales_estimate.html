@@ -21,50 +21,13 @@ $(document).ready(function(){
 <div class="container">
   <p><h4>Enter Site Infromation for Sales Estimate</h4></p>
 
-  <form method = "get">
-
-
-    <div class="form-group">
-      <label for="exampleTextarea">Enter water data file below</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-    </div>
-
-
-    <!-- FILE UPLOAD for water data -->
-
-    <div class="form-group ">
-      <label for="exampleInputFile">Or upload new water data file</label>
-      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name = "water_data_file">
-      <small id="fileHelp" class="form-text text-muted">Select water data file to add to this site</small>
-    </div>
-    <!-- Treatmant Plan -->
-
-  <div class="form-group ">
-    <label for="exampleInputEmail1">Enter Treatmant Method:</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter treatmant plan here" name = "treatmant_plan">
-    <button type="" class="btn btn-primary">Submit</button>
-    <small id="emailHelp" class="form-text text-muted">Or determined suggested treatmant method by clicking below</small>
-    <button type="" class="btn btn-primary">Determine treatmant method</button>
-  </div>
-
-
-  <!-- Update flowrate -->
-
-  <div class="form-group ">
-    <label for="form-text">Enter flowrate:</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Flowrate in gallons per minute (GPM)" name = "flowrate">
-  </div>
-
-  <div class="form-group ">
-    <label for="exampleInputEmail1">Enter Equipment Needed:</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter treatmant plan here" name = "equipment">
-    <button type="" class="btn btn-primary">Submit</button>
-    <small id="emailHelp" class="form-text text-muted">Or determined Equipment Needed</small>
-    <button type="" class="btn btn-primary">Determine Equipment Needed</button>
-  </div>
-
-</form>
-
+      <div class="container">
+        <form method="POST">
+          {{ form.as_p }}
+          {% csrf_token %}
+          <input type="submit" class='btn btn-primary' value="Submit">
+        </form>
+      </div>
 
   <div class="bs-example">
       <!-- Button HTML (to Trigger Modal) -->

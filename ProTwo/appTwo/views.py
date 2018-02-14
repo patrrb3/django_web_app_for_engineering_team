@@ -40,5 +40,6 @@ def model_form_upload(request):
         'form': form
     })
 
+
 def sales_estimate(request):
     return render(request,'appTwo/sales_estimate.html')
